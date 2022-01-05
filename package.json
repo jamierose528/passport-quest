@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express-handlebars": "^6.0.2",
+    "mysql2": "^2.3.3"
+  }
+}
