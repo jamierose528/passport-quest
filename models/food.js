@@ -35,4 +35,4 @@ Food.init(
   }
 );
 
-module.exports = food;
+module.exports = Food;
