@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Blog, Trip} = require('../../models');
-const withAuth = require('../../utils/auth');
+// const withAuth = require('../../utils/auth');
 
 //Get all bloggers/users
 router.get('/', async (req, res) => {
