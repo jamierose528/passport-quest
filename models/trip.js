@@ -14,7 +14,7 @@ Trip.init(
       autoIncrement: true,
       unique: true,
     },
-    User_id: {
+    user_id: {
       type: DataTypes.INTEGER,
       references: {
         model: "user",

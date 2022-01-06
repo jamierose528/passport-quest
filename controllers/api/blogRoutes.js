@@ -1,11 +1,12 @@
 const router = require('express').Router();
-const { Blog, Food, Packing, Trip} = require('../../models');
+const { Blog, Trip} = require('../../models');
 const withAuth = require('../../utils/auth');
 
+//Get all bloggers/users
 router.get('/', async (req, res) => {
     try {
       const blogData = await Blog.findAll({
-        include: [{ model: Blog }],
+        include: [{ model: Blog },{ model: Trip }],
       });
       res.status(200).json(blogData);
     } catch (err) {
@@ -13,10 +14,11 @@ router.get('/', async (req, res) => {
     }
 });
 
-  router.get('/:id', async (req, res) => {
+//Get single blogger/user
+router.get('/:id', async (req, res) => {
     try {
       const blogData = await Blog.findByPk(req.params.id, {
-        include: [{ model: Blog}],
+        include: [{ model: Blog },{ model: Trip }],
       });
   
       if (!blogData) {
@@ -30,7 +32,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-  // CREATE a card
+//Create a blog post
 router.post('/', async (req, res) => {
     try {
       const blogData = await Blog.create({
