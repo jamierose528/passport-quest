@@ -5,7 +5,6 @@ const  {User, Trip, Blog } = require("../models");
 const userData = [
     
     {
-        // id: "1",
         username: "trailTrek", 
         email: "trailtrek@email.com", 
         password: "password",
@@ -16,7 +15,6 @@ const userData = [
 const tripData = [
     
     {
-        // id: "1",
         user_id: 1,
         city: "Tokyo",
         startDay: "January 5th 2022", 
@@ -33,7 +31,6 @@ const tripData = [
 const blogData = [
     
     {
-        // id: "1",
         trip_id: 1, 
         user_id: 1,
         title: "London",
@@ -43,22 +40,17 @@ const blogData = [
     }
 ]
 
-const seedBlog = () => {
-        // await sequelize.sync({ force: true });
-        Blog.bulkCreate(blogData);
+const seedBlog = async () => {
+        await Blog.bulkCreate(blogData);
+        console.log("Blog!");
         
     }
-const seedTrip = () => {
-        // await sequelize.sync({ force: true });
-        Trip.bulkCreate(tripData);
+const seedTrip = async () => {
+        await Trip.bulkCreate(tripData);
     }
-const seedUser = () => {
-        // await sequelize.sync({ force: true });
-        User.bulkCreate(userData);
+const seedUser = async () => {
+        await User.bulkCreate(userData);
         // process.exit(0);
     }
-
-
-
 
 module.exports = {seedBlog, seedUser, seedTrip};

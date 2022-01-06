@@ -4,11 +4,11 @@ const sequelize = require('../config/connection');
 const seedAll = async() =>{
     await sequelize.sync({ force: true });
     console.log("-------------------")
-    await seedBlog()
+    await seedUser()
     console.log("-------------------")
     await seedTrip()
     console.log("-------------------")
-    await seedUser()
+    await seedBlog()
     console.log("-------------------")
     process.exit(0);
 }

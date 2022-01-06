@@ -1,24 +1,24 @@
 const router = require('express').Router();
-const { Blog, Food, Packing, Trip } = require('../models');
+const { Blog, Food, Packing, Trip, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    const TripData = await Trip.findAll({
+    const tripData = await Trip.findAll({
       include: [
         {
-          model: Trip,
-          attributes: ['name'],///
+          model: User,
         },
       ],
     });
 
     const trips = tripData.map((trip) => trip.get({ plain: true }));
-
-    res.render('homepage', { 
-      trips, 
-      logged_in: req.session.logged_in 
-    });
+    console.log(trips);
+    res.json(trips)
+    // res.render('homepage', { 
+    //   trips, 
+    //   logged_in: req.session.logged_in 
+    // });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -30,7 +30,6 @@ router.get('/trip/:id', async (req, res) => {
       include: [
         {
           model: Trip,
-          attributes: ['name'],
         },
       ],
     });
