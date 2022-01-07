@@ -1,0 +1,24 @@
+
+      <div class="wrapper">
+        <div class="container">
+          <div class="flip-book" id="demoBookExample">
+            <div class="page page-cover page-cover-top" data-density="hard">
+              <div class="page-content">
+                <h2 id="passport-name">JAMIE'S PASSPORT</h2>
+                <img id="cover-image" src="images/jamies_profile.jpg" />
+              </div>
+            </div>
+            <!-- PAGES .... -->
+            {{#each trips as | trip | }}
+            {{> page}}
+            {{/each}}
+            <div class="page page-cover page-cover-bottom" data-density="hard">
+              <div class="page-content">
+                <h2>THE END</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/page-flip@0.4.3/dist/js/page-flip.browser.min.js"></script>
+    <script src="js/passport.js"></script>
