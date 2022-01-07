@@ -1,10 +1,48 @@
-<!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Passport Quest</title>
-  <link rel="stylesheet" type="text/css" href="/css/jass.css">
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Passport Quest</title>
+    <link rel="stylesheet" type="text/css" href="/css/jass.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Passport Quest</h1>
+    </header>
+    <main>
+      <div>
+        <card>
+          <h3>Search for a blog</h3>
+          <div>
+            <h4>Search By:</h4>
+            <input
+              type="radio"
+              id="usernamesearch"
+              name="search"
+              value="username"
+            />
+            <label for="usernamesearch">Username</label>
+
+            <input type="radio" id="citysearch" name="search" value="city" />
+            <label for="citysearch">City</label>
+
+            <input
+              type="radio"
+              id="countrysearch"
+              name="search"
+              value="country"
+            />
+            <label for="countrysearch">Country</label>
+
+            <input type="radio" id="foodsearch" name="search" value="food" />
+            <label for="foodsearch">Food</label>
+          </div>
+          <input id="searchbar">
+        </card>
+      </div>
+    </main>
+
+  </body>
+</html>

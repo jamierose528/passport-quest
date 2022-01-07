@@ -60,4 +60,4 @@ User.init(
   }
 );
 
-modeul.exports = User;
+modules.exports = User;
