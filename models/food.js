@@ -5,34 +5,31 @@ const sequelize = require('../config/connection');
 class Food extends Model {}
 
 // create fields/columns for food model
-Food.init(
-  {
+Food.init({
     id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-      unique: true,
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        primaryKey: true,
+        autoIncrement: true,
+        unique: true,
     },
     Trip_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'trip',
-        key: 'id',
-      }
+        type: DataTypes.INTEGER,
+        references: {
+            model: 'trip',
+            key: 'id',
+        }
     },
     Item: {
-      type: DataTypes.STRING,
-      allowNull: false,
+        type: DataTypes.STRING,
+        allowNull: false,
     }
-  },
-  {
+}, {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
     modelName: 'food'
-  }
-);
+});
 
-module.exports = food;
+module.exports = Food;
