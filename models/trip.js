@@ -5,71 +5,71 @@ const sequelize = require("../config/connection");
 class Trip extends Model {}
 
 // create fields/columns for Trip model
-Trip.init(
-  {
+Trip.init({
     id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-      unique: true,
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        primaryKey: true,
+        autoIncrement: true,
+        unique: true,
     },
+
+
     user_id: {
       type: DataTypes.INTEGER,
       references: {
         model: "user",
         key: "id",
       },
+
     },
 
     city: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      defaultValue: 1,
+        type: DataTypes.STRING,
+        allowNull: false,
+        defaultValue: 1,
     },
     startDay: {
-      type: DataTypes.STRING,
-      allowNull: false,
+        type: DataTypes.STRING,
+        allowNull: false,
     },
     endDay: {
-      type: DataTypes.STRING,
-      allowNull: false,
+        type: DataTypes.STRING,
+        allowNull: false,
     },
     budget: {
-      type: DataTypes.DECIMAL(10, 2),
-      allowNull: true,
-      validate: {
-        isDecimal: true,
-      },
+        type: DataTypes.DECIMAL(10, 2),
+        allowNull: true,
+        validate: {
+            isDecimal: true,
+        },
     },
     accommodation: {
-      type: DataTypes.STRING,
-      allowNull: false,
+        type: DataTypes.STRING,
+        allowNull: false,
     },
     transportation: {
-      type: DataTypes.STRING,
-      allowNull: false,
+        type: DataTypes.STRING,
+        allowNull: false,
     },
     emergencyContactName: {
-      type: DataTypes.STRING,
-      allowNull: false,
+        type: DataTypes.STRING,
+        allowNull: false,
     },
     emergencyContactPhone: {
-      type: DataTypes.STRING,
-      allowNull: false,
+        type: DataTypes.STRING,
+        allowNull: false,
     },
     notes: {
-      type: DataTypes.STRING,
-      allowNull: false,
+        type: DataTypes.STRING,
+        allowNull: false,
     },
-  },
-  {
+}, {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
     modelName: "trip",
-  }
-);
+});
 
 module.exports = Trip;
