@@ -4,20 +4,20 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    const tripData = await Trip.findAll({
-      include: [
-        {
-          model: User,
-        },
-      ],
-    });
+    // const tripData = await Trip.findAll({
+    //   include: [
+    //     {
+    //       model: User,
+    //     },
+    //   ],
+    // });
 
-    const trips = tripData.map((trip) => trip.get({ plain: true }));///figure out why this is the case of skipping and straight to the error on line 24.
-    console.log(trips);
+    // const trips = tripData.map((trip) => trip.get({ plain: true }));
+    // console.log(trips);
     // res.json(trips)
     res.render('homepage', { 
-      trips, 
-      logged_in: req.session.logged_in 
+    //   trips, 
+    //   logged_in: req.session.logged_in 
     });
   } catch (err) {
     // res.status(500).json(err);
