@@ -13,12 +13,15 @@ Trip.init({
         autoIncrement: true,
         unique: true,
     },
-    User_id: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: "user",
-            key: "id",
-        },
+
+
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "user",
+        key: "id",
+      },
+
     },
 
     city: {

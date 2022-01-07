@@ -1,21 +1,53 @@
-// const sequelize = require('../config/connection');
-// const { Blog, Food, Packing, Trip } = require('../models');
+const { setDefaultResultOrder } = require("dns");
+const sequelize = require("../config/connection");
+const { User, Trip, Blog } = require("../models");
 
-// [
-//     {
-//       "name": "Los Angeles",
-//       "description": "A mobile app that will send you notifications whenever a concert is playing in your area.",
-//       "needed_funding": 5000
-//     },
-//     {
-//       "name": "The Ultimate Tech Quiz",
-//       "description": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!",
-//       "needed_funding": 10000
-//     },
-//     {
-//       "name": "Roll 'Em Up",
-//       "description": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes.",
-//       "needed_funding": 800
-//     }
-//   ]
+const userData = [
+  {
+    username: "trailTrek",
+    email: "trailtrek@email.com",
+    password: "password",
+  },
+];
 
+const tripData = [
+  {
+    user_id: 1,
+    city: "Tokyo",
+    startDay: "January 5th 2022",
+    endDay: "January 15th 2022",
+    budget: 5000,
+    accommodation: "Wardorf Astorio",
+    transportation: "bus",
+    emergencyContactName: "Mom",
+    emergencyContactPhone: "2131234567",
+    notes: "allergic to nuts",
+  },
+];
+
+const blogData = [
+  {
+    trip_id: 1,
+    user_id: 1,
+    title: "London",
+    entry:
+      "Today was great, ate a lot of good food, saw a lot of great sights.",
+    photo: "urlfromcloudify",
+    video: "urlfromcloudify",
+  },
+];
+
+const seedBlog = async () => {
+  await Blog.bulkCreate(blogData);
+  console.log("Blog!");
+};
+
+const seedTrip = async () => {
+  await Trip.bulkCreate(tripData);
+};
+
+const seedUser = async () => {
+  await User.bulkCreate(userData);
+};
+
+module.exports = { seedBlog, seedUser, seedTrip };

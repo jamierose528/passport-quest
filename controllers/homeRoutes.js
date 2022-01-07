@@ -1,29 +1,27 @@
 const router = require('express').Router();
-const { Blog, Food, Packing, Trip } = require('../models');
+const { Blog, Food, Packing, Trip, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
-    const TripData = await Trip.findAll({
+    const tripData = await Trip.findAll({
       include: [
         {
-          model: Trip,
-          attributes: ['name'],///
+          model: User,
         },
       ],
     });
 
-    // Serialize data so the template can read it
-    const trips = tripData.map((trip) => trip.get({ plain: true }));
-
-    // Pass serialized data and session flag into template
+    const trips = tripData.map((trip) => trip.get({ plain: true }));///figure out why this is the case of skipping and straight to the error on line 24.
+    console.log(trips);
+    // res.json(trips)
     res.render('homepage', { 
       trips, 
       logged_in: req.session.logged_in 
     });
   } catch (err) {
-    res.status(500).json(err);
+    // res.status(500).json(err);
+    res.json("We've got an issue!")
   }
 });
 
@@ -33,7 +31,6 @@ router.get('/trip/:id', async (req, res) => {
       include: [
         {
           model: Trip,
-          attributes: ['name'],
         },
       ],
     });
