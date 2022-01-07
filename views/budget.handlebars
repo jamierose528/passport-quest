@@ -1,0 +1,49 @@
+<div class="budget-section">
+
+  <div class="budget col col-md col-sm">
+    <h2>budget</h2>
+    <img src="image/money-bag.svg" width="40" alt="" />
+    <p class="amount">$ <span id="budgetAmount">0</span></p>
+  </div>
+
+  <div class="expenses col col-md col-sm">
+    <h2>expenses</h2>
+    <img src="image/accounting.svg" width="40" alt="" />
+    <p class="exp-amount">$ <span id="expensesAmount">0</span></p>
+  </div>
+
+  <div class="balance col col-md col-sm">
+    <h2>balance</h2>
+    <img src="image/law.svg" width="40" alt="" />
+    <p class="amount bala">$ <span id="balanceAmount">0</span></p>
+  </div>
+
+</div>
+
+<div class="budget-form" id="budgetform">
+    <form id="addForm">
+       <label for=""> Make a budget</label> <br />
+       <input type="number" id="number" /> <br />
+       <button type="submit">Add Budget</button>
+     </form>
+</div>
+
+<div class="expense-form" id="expense-form">
+ <form action="" id="expForm">
+
+   <div class="">
+     <label for="">Please enter your expense</label> <br />
+     <input type="text" id="expName" />
+   </div>
+
+   <div class="">
+      <label for="">Please enter expense amount</label> <br />
+      <input type="number" id="expNumber" />
+   </div>
+
+   <button type="submit" id="submitExpen">Add expense</button>
+ </form>
+</div>
+
+{{!-- <script src="./js/budget.js"></script> --}}
+<script src="./js/expenses.js"></script>
