@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-  router.get('/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
     try {
       const userData = await User.findByPk(req.params.id, {
         include: [{ model: User}],

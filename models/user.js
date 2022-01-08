@@ -1,4 +1,4 @@
-const { Model, DataTypes } = require("sequelize");
+const { Model, DataTypes, STRING } = require("sequelize");
 const bcrypt = require("bcrypt");
 const sequelize = require("../config/connection");
 
@@ -21,6 +21,39 @@ User.init(
       allowNull: false,
     },
 
+    profile_picture: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+
+    first_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    middle_name: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    last_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    birthday: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    nationality: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    current_location: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    home_country: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -29,13 +62,17 @@ User.init(
         isEmail: true,
       },
     },
-
     password: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [12],
       },
+    },
+
+    passport_color: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
   },
   {
@@ -60,4 +97,4 @@ User.init(
   }
 );
 
-modeul.exports = User;
+module.exports = User;
