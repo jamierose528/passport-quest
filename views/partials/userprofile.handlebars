@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/profile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue&family=Fuzzy+Bubbles&family=Rock+Salt&display=swap"
+      rel="stylesheet"
+    />
+    <title>User Profile</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="title-name">Passport Quest</h1>
+    </header>
+    <nav>
+      <div class="sidebar">
+        <a class="jump" href="#maketrip">Make a New Trip</a>
+        <a class="jump" href="#mytrips">My Trips</a>
+        <a class="jump" href="#myblog">My Blogs</a>
+        <a class="jump" href="#newblog">Make a New Blog</a>
+      </div>
+    </nav>
+    <main>
+      <section id="passport-block">
+        <img id="user-profile-picture" />
+        <ul id="user-information">
+          <li id="user-name">Name: {{}}</li>
+          <li id="user-email">Email: {{}}</li>
+          <li id="user-username">Username: {{}}}</li>
+          <li id="user-birthday">Birthday: {{}}</li>
+          <li id="user-nationality">Nationality: {{}}</li>
+          <li id="user-location">Currently in: {{}}</li>
+        </ul>
+      </section>
+      
+    </main>
+  </body>
+</html>
