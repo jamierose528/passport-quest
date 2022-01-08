@@ -1,0 +1,51 @@
+{{!-- home page, navbar with option to sign in, sign up, about us, help --}}
+ <header>
+      <h1 id="title-name">Passport Quest</h1>
+    </header>
+    <nav>
+      <div class="navbar">
+        <a class="jump" href="#login">Log In</a>
+        <a class="jump" href="#signup">Sign Up</a>
+      </div>
+    </nav>
+    <main>
+      <section class="card">
+        <h3 id="search-title">Search for a blog</h3>
+        <div>
+          <h4 id="search-parameter">Search By:</h4>
+
+          <div id="input-search-parameter">
+            <label for="usernamesearch">
+              <input
+                type="radio"
+                id="usernamesearch"
+                name="search"
+                value="username"
+              />
+              Username</label
+            >
+
+            <label for="citysearch">
+              <input type="radio" id="citysearch" name="search" value="city" />
+              City</label
+            >
+
+            <label for="countrysearch">
+              <input
+                type="radio"
+                id="countrysearch"
+                name="search"
+                value="country"
+              />
+              Country</label
+            >
+
+            <label for="foodsearch">
+              <input type="radio" id="foodsearch" name="search" value="food" />
+              Food</label
+            >
+          </div>
+        </div>
+        <input type="text" id="searchbar" placeholder="search..." />
+      </section>
+    </main>
