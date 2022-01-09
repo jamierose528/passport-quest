@@ -1,0 +1,94 @@
+* {
+  color: white;
+}
+body {
+  background-color: rgb(247, 235, 235);
+  background-image: url(../images/b-w_stamps.png);
+}
+header {
+  background-color: #cfd4c5;
+  text-align: center;
+  font-size: 40px;
+  text-shadow: 3px 3px 5px rgb(51, 51, 51);
+  color: white;
+  height: 15%;
+  padding-top: 15px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Rock Salt", cursive;
+}
+
+h4 {
+  font-family: "Fuzzy Bubbles", cursive;
+}
+
+nav {
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 32px;
+  width: auto;
+  font-family: "Fuzzy Bubbles", cursive;
+  box-sizing: border-box;
+  text-align: right;
+  background-color: #cfd4c5;
+  box-shadow: 0 12px 10px rgb(71, 71, 71);
+  z-index: 0;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin: 6 auto;
+  width: 100px;
+  font-family: "Comic Neue", cursive;
+  text-shadow: 1px 1px 5px rgb(51, 51, 51);
+  font-size: 15px;
+}
+
+#search-title {
+  text-shadow: 3px 3px 5px rgb(24, 24, 24);
+  font-size: 25px;
+}
+
+#search-parameter {
+  margin-bottom: 15px;
+  text-shadow: 3px 3px 5px rgb(24, 24, 24);
+  font-size: 25px;
+}
+
+#searchbar {
+  height: 30px;
+  border-radius: 17px;
+  box-shadow: 0 3px 10px rgb(41, 41, 41);
+}
+
+.jump {
+  margin: auto 10px;
+  text-shadow: 1px 1px 5px rgb(51, 51, 51);
+}
+
+.card {
+  margin: 100px auto;
+  width: 25%;
+  background-color: #a1968e;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 17px;
+  padding-bottom: 31px;
+  box-shadow: 0 5px 10px rgb(41, 41, 41);
+}
+
+input::placeholder {
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+a:hover,
+label:hover {
+  text-shadow: 3px 3px 5px rgb(51, 51, 51);
+  transition: all 0.3s ease-in-out;
+}

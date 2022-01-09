@@ -1,20 +1,28 @@
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Passport Quest</title>
-  <link rel="stylesheet" type="text/css" href="/css/jass.css">
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Passport Quest</title>
+    <link rel="stylesheet" type="text/css" href="/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/css/jass.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue&family=Fuzzy+Bubbles&family=Rock+Salt&display=swap"
+      rel="stylesheet"
+    />
 
-<body>
+  </head>
 
-  <main class="container container-fluid mt-5">
+  <body>
+      {{>header}}
+    <main class="container container-fluid mt-5">
       <!-- Render the sub layout -->
-      {{{ body }}}
-  </main>
+      {{{body}}}
+    </main>
 
-  <script src="/js/uploadwidget.js"></script>
-  
-</body>
+    <script src="/js/uploadwidget.js"></script>
+
+  </body>
 </html>
