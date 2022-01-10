@@ -2,7 +2,7 @@
             <section class="card" style="width: 600px; height: auto;">
 
                 <h3 id="title-">Sign Up</h3>
-                <form>
+                <form class="signup-form">
                     <div class="form-group">
                         <p>
                             <label for="username"> UserName:*</label><input type="text" id="userName" name="userName" style="color: #000000 !important"></input>
@@ -11,7 +11,7 @@
                             <label for="email">Email:*</label><input type="text" id="email" name="email" style="color: #000000 !important"></input>
                         </p>
                         <p>
-                            <label for="password"> Password:* </label><input type="text" id="password" name="password" style="color: #000000 !important"></input>
+                            <label for="password"> Password:* </label><input type="password" id="password" name="password" style="color: #000000 !important"></input>
                         </p>
                         <p>
                             <label for="firstName"> First Name:* </label><input type="text" id="firstName" name="firstName" style="color: #000000 !important"></input>
@@ -31,14 +31,15 @@
                             <label for="homeCountry"> Home Country: </label><input type="text" id="homeCountry" name="homeCountry" style="color: #000000 !important"></input>
                         </p>
                         <p><label for="first"> Profite Picture:*</label></p>
+                         <ul class="actions">
+                    <input type="submit" value="submit" class="button primary">
+                </ul>
                 </form>
                 <form action="/action_page.php">
                     <input type="file" id="img" name="img" accept="image/*" style="float: left;">
                 </form>
                 </div>
-                <ul class="actions">
-                    <input href="#profile-page" type="submit" value="submit" class="button primary">
-                </ul>
+               
 
 
-    <script src="./JS/JavaScript.js "></script>
+    <script src="/js/login.js"></script>

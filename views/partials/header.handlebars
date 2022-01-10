@@ -3,8 +3,13 @@
 </header>
 <nav>
   <div class="navbar">
-    <a class="jump" href="#about-me">Log In</a>
-    <a class="jump" href="#sign-up">Sign Up</a>
-    <a class="jump" href="#home">Home</a>
+    {{#if logged_in}}
+      <a class="jump" href="/userprofile">Profile</a>
+    {{else}}
+      <a class="jump" href="/login">Log In</a>
+      <a class="jump" href="/signup">Sign Up</a>
+    {{/if}}
+    <a class="jump" href="/profile">Passport</a>
+    <a class="jump" href="/">Home</a>
   </div>
 </nav>

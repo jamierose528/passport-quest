@@ -40,16 +40,13 @@ User.init(
     },
     birthday: {
       type: DataTypes.STRING,
-      allowNull: true,//
+      allowNull: true, //
     },
     nationality: {
       type: DataTypes.STRING,
-      allowNull: true,//
+      allowNull: true, //
     },
-    current_location: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
+
     home_country: {
       type: DataTypes.STRING,
       allowNull: true,
@@ -66,12 +63,12 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [12],
+        len: [6],
       },
     },
     passport_color: {
       type: DataTypes.STRING,
-      allowNull: true,//
+      allowNull: true, //
     },
   },
   {
