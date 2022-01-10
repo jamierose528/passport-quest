@@ -11,12 +11,10 @@ router.get("/", async(req, res) => {
         //     },
         //   ],
         // });
-
-
         // const trips = tripData.map((trip) => trip.get({ plain: true }));
         // console.log(trips);
         // res.json(trips)
-        res.render("login", {
+        res.render("profile", {
             //   trips,
             //   logged_in: req.session.logged_in
         });
@@ -30,11 +28,9 @@ router.get("/trip/:id", async(req, res) => {
     try {
         const tripData = await Trip.findByPk(req.params.id, {
             include: [{
-                model: Trip,
+                model: User,
             }, ],
         });
-
-
         const trip = tripData.get({ plain: true });
 
         res.render("trip", {
@@ -50,7 +46,7 @@ router.get("/trip/:id", async(req, res) => {
 router.get('/viewblogs', async (req, res) => {
   try {
     const blogData = await Blog.findAll( {
-      include: [{ model: Trip }],
+      include: [{ model: Trip, model: User }],
     });
   
     const blogs = blogData.map(blog => blog.get({plain: true}))
@@ -65,14 +61,14 @@ router.get('/viewblogs', async (req, res) => {
 });
 
 //Viewing all trips
-router.get('/viewtrip', async (req, res) => {
+router.get('/viewtrips', async (req, res) => {
   try {
     const tripData = await Trip.findAll( {
-      include: [{ model: Trip }],
+      include: [{ model: User }],
     });
   
     const trips = tripData.map(trip => trip.get({plain: true}))
-
+    // res.json(trips);///see whats getting sent to the handlebars///
     res.render("viewtrips", {
       trips,
       logged_in: req.session.logged_in,
@@ -97,7 +93,6 @@ router.get('/addblog', async (req, res) => {
 router.get('/addtrip', async (req, res) => {
   try {
     res.render("addtrip", {
-      trips,
       logged_in: req.session.logged_in,
     });
     } catch (err) {
@@ -108,14 +103,7 @@ router.get('/addtrip', async (req, res) => {
 //route for viewing user profile page
 router.get('/userprofile', async (req, res) => {
   try {
-    // const tripData = await Trip.findAll( {
-    //   include: [{ model: Trip }],
-    // });
-  
-    // const trips = tripData.map(trip => trip.get({plain: true}))
-
     res.render("userprofile", {
-      user,
       logged_in: req.session.logged_in,
     });
     } catch (err) {
@@ -126,14 +114,7 @@ router.get('/userprofile', async (req, res) => {
 //route for the the signup page
 router.get('/signup', async (req, res) => {
   try {
-    // const tripData = await Trip.findAll( {
-    //   include: [{ model: Trip }],
-    // });
-  
-    // const trips = tripData.map(trip => trip.get({plain: true}))
-
     res.render("signup", {
-      user,
       logged_in: req.session.logged_in,
     });
     } catch (err) {
@@ -142,16 +123,9 @@ router.get('/signup', async (req, res) => {
 });
 
 //route for the the searchpage page
-router.get('/profile', async (req, res) => {
+router.get('/searchpage', async (req, res) => {
   try {
-    // const tripData = await Trip.findAll( {
-    //   include: [{ model: Trip }],
-    // });
-  
-    // const trips = tripData.map(trip => trip.get({plain: true}))
-
-    res.render("profile", {
-      user,
+    res.render("searchpage", {
       logged_in: req.session.logged_in,
     });
     } catch (err) {
@@ -159,6 +133,24 @@ router.get('/profile', async (req, res) => {
     }
 });
 
+//route for the the public profile page
+router.get('/profile', async (req, res) => {
+  try {
+    const profileData = await User.findByPk(req.session.user_id, {
+      include: [{
+          model: Trip,
+      }, ],
+  });
+  const profile = profileData.get({ plain: true });
+  // res.json(profile);
+    res.render("profile", {
+      ...profile,
+      logged_in: req.session.logged_in,
+    });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+});
 
 // Use withAuth middleware to prevent access to route
 router.get("/trip", withAuth, async(req, res) => {
