@@ -5,7 +5,7 @@
         <div class="page page-cover page-cover-top" data-density="hard">
           <div class="page-content">
             <h2 id="passport-name">{{first_name}}'S PASSPORT</h2>
-            <img id="cover-image" src="images/jamies_profile.jpg" />
+            {{!-- <img id="cover-image" src="images/jamies_profile.jpg" /> --}}
           </div>
         </div>
           <div class="page">
@@ -18,19 +18,19 @@
               <section id="passport-block">
                 <img id="user-profile-picture" />
                 <ul id="user-information">
-                  <li class="profile-info" id="user-name">Name: {{}}</li>
-                      <li class="profile-info" id="user-email">Email: {{}}</li>
+                  <li class="profile-info" id="user-name">Name: {{first_name}}</li>
+                      <li class="profile-info" id="user-email">Email: {{email}}</li>
                       <li class="profile-info" id="user-username">
-                        Username: {{}}
+                        Username: {{username}}
                       </li>
                       <li class="profile-info" id="user-birthday">
-                        Birthday: {{}}
+                        Birthday: {{birthday}}
                       </li>
                       <li class="profile-info" id="user-nationality">
-                        Nationality: {{}}
+                        Nationality: {{nationality}}
                       </li>
                       <li class="profile-info" id="user-location">
-                        Currently in: {{}}
+                        Currently in: {{current_location}}
                       </li>
                 </ul>
               </section>
@@ -39,9 +39,11 @@
           </div>
         </div>
         <!-- PAGES .... -->
+        {{#if trips.length}}
         {{#each trips as | trip | }}
         {{> page}}
         {{/each}}
+        {{/if}}
         <div class="page page-cover page-cover-bottom" data-density="hard">
           <div class="page-content">
             <h2>THE END</h2>
@@ -53,4 +55,4 @@
 </main>
 <script src="https://cdn.jsdelivr.net/npm/page-flip@0.4.3/dist/js/page-flip.browser.min.js"></script>
 <script src="js/passport.js"></script>
-<script src="js/renderBlog.js"></script>
+{{!-- <script src="js/renderBlog.js"></script> --}}
