@@ -142,6 +142,7 @@ router.get('/profile', async (req, res) => {
       }, ],
   });
   const profile = profileData.get({ plain: true });
+  // res.json(profile);
     res.render("profile", {
       ...profile,
       logged_in: req.session.logged_in,
