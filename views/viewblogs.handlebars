@@ -1,8 +1,14 @@
-<article class="viewBlog">
+{{#if blogs.length}}
+  <div class="col-md-6 project-list">
+    <h3>View Blogs:</h3>
 
-    {{#each blogs as |blog| }}
-        {{> blog-info blog}}
+    {{#each blogs as |blog|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/viewBlogs/{{blog.id}}">{{blog.name}}</a></h4>
+      </div>
+    
+    </div>
     {{/each}}
-
-</article>
-
+  </div>
+  {{/if}}

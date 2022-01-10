@@ -1,8 +1,14 @@
-<article class="viewTrip">
+{{#if trips.length}}
+  <div class="col-md-6 project-list">
+    <h3>View Trips:</h3>
 
-    {{#each trips as |trip| }}
-        {{> trip-info trip}}
+    {{#each trips as |trip|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/viewTrips/{{trip.id}}">{{trip.name}}</a></h4>
+      </div>
+    
+    </div>
     {{/each}}
-
-</article>
-
+  </div>
+  {{/if}}
