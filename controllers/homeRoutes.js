@@ -31,8 +31,6 @@ router.get("/trip/:id", async(req, res) => {
                 model: Trip,
             }, ],
         });
-
-
         const trip = tripData.get({ plain: true });
 
         res.render("trip", {
@@ -105,14 +103,7 @@ router.get('/addtrip', async (req, res) => {
 //route for viewing user profile page
 router.get('/userprofile', async (req, res) => {
   try {
-    // const tripData = await Trip.findAll( {
-    //   include: [{ model: Trip }],
-    // });
-  
-    // const trips = tripData.map(trip => trip.get({plain: true}))
-
     res.render("userprofile", {
-      user,
       logged_in: req.session.logged_in,
     });
     } catch (err) {
@@ -123,14 +114,7 @@ router.get('/userprofile', async (req, res) => {
 //route for the the signup page
 router.get('/signup', async (req, res) => {
   try {
-    // const tripData = await Trip.findAll( {
-    //   include: [{ model: Trip }],
-    // });
-  
-    // const trips = tripData.map(trip => trip.get({plain: true}))
-
     res.render("signup", {
-      user,
       logged_in: req.session.logged_in,
     });
     } catch (err) {
@@ -139,16 +123,9 @@ router.get('/signup', async (req, res) => {
 });
 
 //route for the the searchpage page
-router.get('/profile', async (req, res) => {
+router.get('/searchpage', async (req, res) => {
   try {
-    // const tripData = await Trip.findAll( {
-    //   include: [{ model: Trip }],
-    // });
-  
-    // const trips = tripData.map(trip => trip.get({plain: true}))
-
-    res.render("profile", {
-      user,
+    res.render("searchpage", {
       logged_in: req.session.logged_in,
     });
     } catch (err) {
@@ -156,6 +133,16 @@ router.get('/profile', async (req, res) => {
     }
 });
 
+//route for the the public profile page
+router.get('/profile', async (req, res) => {
+  try {
+    res.render("profile", {
+      logged_in: req.session.logged_in,
+    });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+});
 
 // Use withAuth middleware to prevent access to route
 router.get("/trip", withAuth, async(req, res) => {
