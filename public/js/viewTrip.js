@@ -1,6 +1,6 @@
 const viewTrip = async () => {
   const response = await fetch("/api/users/viewTrip", {
-    method: "POST",
+    method: "GET",
     headers: { "Content-Type": "application/json" },
   });
 

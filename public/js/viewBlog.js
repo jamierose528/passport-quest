@@ -1,6 +1,6 @@
 const viewBlog = async () => {
   const response = await fetch("/api/users/viewBlog", {
-    method: "POST",
+    method: "GET",
     headers: { "Content-Type": "application/json" },
   });
 
