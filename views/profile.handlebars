@@ -1,46 +1,47 @@
-
-      <div class="wrapper">
-        <div class="container">
-          <div class="flip-book" id="demoBookExample">
-            <div class="page page-cover page-cover-top" data-density="hard">
-              <div class="page-content">
-                <h2 id="passport-name">JAMIE'S PASSPORT</h2>
-                <img id="cover-image" src="images/jamies_profile.jpg" />
-              </div>
+<main>
+  <div class="wrapper">
+    <div class="container">
+      <div class="flip-book" id="demoBookExample">
+        <div class="page page-cover page-cover-top" data-density="hard">
+          <div class="page-content">
+            <h2 id="passport-name">JAMIE'S PASSPORT</h2>
+            <img id="cover-image" src="images/jamies_profile.jpg" />
+          </div>
+        </div>
+          <div class="page">
+          <div class="page-content">
+            <h2 class="page-header">About Me</h2>
+            <div id="passport-picture-container">
+              <img id="passport-picture" src="{{profile_picture}}" />
             </div>
-              <div class="page">
-              <div class="page-content">
-                <h2 class="page-header">About Me</h2>
-                <div id="passport-picture-container">
-                  <img id="passport-picture" src="{{profile_picture}}" />
-                </div>
-                <div class="page-text">
-                  <section id="passport-block">
-                    <img id="user-profile-picture" />
-                    <ul id="user-information">
-                      <li id="user-name">Name: {{first_name}}{{middle_name}}{{last_name}}</li>
-                      <li id="user-email">Email: {{email}}</li>
-                      <li id="user-username">Username: {{username}}</li>
-                      <li id="user-birthday">Birthday: {{birthday}}</li>
-                      <li id="user-nationality">Nationality: {{nationality}}</li>
-                      <li id="user-location">Currently in: {{current_location}}</li>
-                    </ul>
-                  </section>
-                </div>
-                <div class="page-footer">1</div>
-              </div>
+            <div class="page-text">
+              <section id="passport-block">
+                <img id="user-profile-picture" />
+                <ul id="user-information">
+                  <li id="user-name">Name: {{first_name}}{{middle_name}}{{last_name}}</li>
+                  <li id="user-email">Email: {{email}}</li>
+                  <li id="user-username">Username: {{username}}</li>
+                  <li id="user-birthday">Birthday: {{birthday}}</li>
+                  <li id="user-nationality">Nationality: {{nationality}}</li>
+                  <li id="user-location">Currently in: {{current_location}}</li>
+                </ul>
+              </section>
             </div>
-            <!-- PAGES .... -->
-            {{#each trips as | trip | }}
-            {{> page}}
-            {{/each}}
-            <div class="page page-cover page-cover-bottom" data-density="hard">
-              <div class="page-content">
-                <h2>THE END</h2>
-              </div>
-            </div>
+            <div class="page-footer">1</div>
+          </div>
+        </div>
+        <!-- PAGES .... -->
+        {{#each trips as | trip | }}
+        {{> page}}
+        {{/each}}
+        <div class="page page-cover page-cover-bottom" data-density="hard">
+          <div class="page-content">
+            <h2>THE END</h2>
           </div>
         </div>
       </div>
-    <script src="https://cdn.jsdelivr.net/npm/page-flip@0.4.3/dist/js/page-flip.browser.min.js"></script>
-    <script src="js/passport.js"></script>
+    </div>
+  </div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/page-flip@0.4.3/dist/js/page-flip.browser.min.js"></script>
+<script src="js/passport.js"></script>
