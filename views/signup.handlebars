@@ -1,0 +1,85 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Passport Quest</title>
+    <link rel="stylesheet" href="./css/addprofile/reset.css" />
+    <link rel="stylesheet" href="./css/addprofile/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&family=Fuzzy+Bubbles&family=Rock+Salt&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1 id="title-">Passport Quest</h1>
+    </header>
+    <nav>
+        <div class="navbar">
+            <a class="jump" href="#about-me">Log Out</a>
+            <a class="jump" href="#home">Home</a>
+            <a class="jump" href="#software">About Us</a>
+            <a class="jump" href="#graphics">Help</a>
+        </div>
+    </nav>
+    <main>
+
+        <div class="container" style="font-family: Fuzzy Bubbles, cursive; color: Black">
+            <section class="card" style="width: 600px; height: auto;">
+
+                <h3 id="title-">Sign Up</h3>
+                <form>
+                    <div class="form-group">
+                        <p>
+                            <label for="username"> UserName:*</label><input type="text" id="userName" name="userName" style="color: #000000 !important"></input>
+                        </p>
+                        <p>
+                            <label for="email">Email:*</label><input type="text" id="email" name="email" style="color: #000000 !important"></input>
+                        </p>
+                        <p>
+                            <label for="password"> Password:* </label><input type="text" id="password" name="password" style="color: #000000 !important"></input>
+                        </p>
+                        <p>
+                            <label for="firstName"> First Name:* </label><input type="text" id="firstName" name="firstName" style="color: #000000 !important"></input>
+                        </p>
+                        <p>
+                            <label for="middleName"> Middle Name: </label><input type="text" id="middleName" name="middleName" style="color: #000000 !important"></input>
+                        </p>
+                        <p>
+                            <label for="lastName"> Last Name:* </label><input type="text" id="lastName" name="lastName" style="color: #000000 !important"></input>
+                        </p>
+                        <p>
+                            <label for="birthday"> Birthday:* </label><input type="text" id="datepicker" style="color: #000000 !important"></p>
+                        <p>
+                            <label for="nationality"> Nationality:* </label><input type="text" id="nationality" name="nationality" style="color: #000000 !important"></input>
+                        </p>
+                        <p>
+                            <label for="currentLocation"> Current Location: </label><input type="text" id="currentLocation" name="currentLocation" style="color: #000000 !important"></input>
+                        </p>
+                        <p>
+                            <label for="homeCountry"> Home Country: </label><input type="text" id="homeCountry" name="homeCountry" style="color: #000000 !important"></input>
+                        </p>
+                        <p><label for="first"> Profite Picture:*</label></p>
+                </form>
+                <form action="/action_page.php">
+                    <input type="file" id="img" name="img" accept="image/*" style="float: left;">
+                </form>
+                </div>
+                <ul class="actions">
+                    <input href="#profile-page" type="submit" value="submit" class="button primary">
+                </ul>
+
+
+
+    </main>
+
+    <script src="./JS/JavaScript.js "></script>
+
+</body>
+
+</html>
