@@ -1,36 +1,35 @@
-        <div class="container" style="font-family: Fuzzy Bubbles, cursive; color: Black">
-            <section class="card" style="width: 600px; height: auto;">
-
-                <h3 id="title-">Sign Up</h3>
-                <form>
-                    <div class="form-group">
-                        <p>
-                            <label for="username"> UserName:*</label><input type="text" id="userName" name="userName" style="color: #000000 !important"></input>
-                        </p>
-                        <p>
-                            <label for="email">Email:*</label><input type="text" id="email" name="email" style="color: #000000 !important"></input>
-                        </p>
-                        <p>
-                            <label for="password"> Password:* </label><input type="text" id="password" name="password" style="color: #000000 !important"></input>
-                        </p>
-                        <p>
-                            <label for="firstName"> First Name:* </label><input type="text" id="firstName" name="firstName" style="color: #000000 !important"></input>
-                        </p>
-                        <p>
-                            <label for="middleName"> Middle Name: </label><input type="text" id="middleName" name="middleName" style="color: #000000 !important"></input>
-                        </p>
-                        <p>
-                            <label for="lastName"> Last Name:* </label><input type="text" id="lastName" name="lastName" style="color: #000000 !important"></input>
-                        </p>
-                        <p>
-                            <label for="birthday"> Birthday:* </label><input type="text" id="datepicker" style="color: #000000 !important"></p>
-                        <p>
-                            <label for="nationality"> Nationality:* </label><input type="text" id="nationality" name="nationality" style="color: #000000 !important"></input>
-                        </p>
-                        <p>
-                            <label for="homeCountry"> Home Country: </label><input type="text" id="homeCountry" name="homeCountry" style="color: #000000 !important"></input>
-                        </p>
-                        <p><label for="first"> Profite Picture:*</label></p>
+<div class="container" style="font-family: Fuzzy Bubbles, cursive; color: Black">
+    <section class="card" style="width: 600px; height: auto;">
+    <h3 id="title-">Sign Up</h3>
+        <form>
+            <div class="form-group">
+                <p>
+                    <label for="username"> UserName:*</label><input type="text" id="userName" name="userName" style="color: #000000 !important"></input>
+                </p>
+                <p>
+                    <label for="email">Email:*</label><input type="text" id="email" name="email" style="color: #000000 !important"></input>
+                </p>
+                <p>
+                    <label for="password"> Password:* </label><input type="text" id="password" name="password" style="color: #000000 !important"></input>
+                </p>
+                <p>
+                    <label for="firstName"> First Name:* </label><input type="text" id="firstName" name="firstName" style="color: #000000 !important"></input>
+                </p>
+                <p>
+                    <label for="middleName"> Middle Name: </label><input type="text" id="middleName" name="middleName" style="color: #000000 !important"></input>
+                </p>
+                <p>
+                    <label for="lastName"> Last Name:* </label><input type="text" id="lastName" name="lastName" style="color: #000000 !important"></input>
+                </p>
+                <p>
+                    <label for="birthday"> Birthday:* </label><input type="text" id="datepicker" style="color: #000000 !important"></p>
+                <p>
+                    <label for="nationality"> Nationality:* </label><input type="text" id="nationality" name="nationality" style="color: #000000 !important"></input>
+                </p>
+                <p>
+                    <label for="homeCountry"> Home Country: </label><input type="text" id="homeCountry" name="homeCountry" style="color: #000000 !important"></input>
+                </p>
+                <p><label for="first"> Profite Picture:*</label></p>
                 </form>
                 <form action="/action_page.php">
                     <input type="file" id="img" name="img" accept="image/*" style="float: left;">
@@ -40,5 +39,10 @@
                     <input href="#profile-page" type="submit" value="submit" class="button primary">
                 </ul>
 
-
+$(function() {
+    $("#datepicker").datepicker({
+        changeMonth: true,
+        changeYear: true
+    });
+});
     <script src="./JS/JavaScript.js "></script>
