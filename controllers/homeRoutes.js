@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
     // const trips = tripData.map((trip) => trip.get({ plain: true }));
     // console.log(trips);
     // res.json(trips)
-    res.render('homepage', { 
+    res.render('profile', { 
     //   trips, 
     //   logged_in: req.session.logged_in 
     });
