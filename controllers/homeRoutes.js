@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Blog, Food, Packing, Trip, User } = require("../models");
+const { Blog, Trip, User } = require("../models");
 const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
@@ -15,7 +15,7 @@ router.get("/", async (req, res) => {
     // const trips = tripData.map((trip) => trip.get({ plain: true }));
     // console.log(trips);
     // res.json(trips)
-    res.render("login", {
+    res.render("userprofile", {
       //   trips,
       //   logged_in: req.session.logged_in
     });
@@ -27,7 +27,7 @@ router.get("/", async (req, res) => {
 
 router.get("/trip/:id", async (req, res) => {
   try {
-    const tripData = await Trip.findByPk(req.params.id, {
+    const tripData = await Trip.findByPk(req.params.id, {/////do one of these per route 
       include: [
         {
           model: Trip,
@@ -45,7 +45,62 @@ router.get("/trip/:id", async (req, res) => {
     res.status(500).json(err);
   }
 });
-///////////////////////////////////////////////////////////////////////////////////////////
+
+//Viewing all blogs
+router.get('/viewblogs', async (req, res) => {
+  try {
+    const blogData = await Blog.findAll( {
+      include: [{ model: Trip }],
+    });
+  
+    const blogs = blogData.map(blog => blog.get({plain: true}))
+
+    res.render("viewblogs", {
+      blogs,
+      logged_in: req.session.logged_in,
+    });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+});
+
+//Viewing all trips
+router.get('/viewtrip', async (req, res) => {
+  try {
+    const tripData = await Trip.findAll( {
+      include: [{ model: Trip }],
+    });
+  
+    const trips = tripData.map(trip => trip.get({plain: true}))
+
+    res.render("viewtrips", {
+      trips,
+      logged_in: req.session.logged_in,
+    });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+});
+
+//route for adding a blog page
+router.get('/addblog', async (req, res) => {
+  try {
+    const tripData = await Trip.findAll( {
+      include: [{ model: Trip }],
+    });
+  
+    const trips = tripData.map(trip => trip.get({plain: true}))
+
+    res.render("viewtrips", {
+      trips,
+      logged_in: req.session.logged_in,
+    });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+});
+
+document.querySelector("#addBlog").addEventListener("click", addBlog);
 
 // Use withAuth middleware to prevent access to route
 router.get("/trip", withAuth, async (req, res) => {
