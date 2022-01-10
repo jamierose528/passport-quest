@@ -28,7 +28,7 @@ router.get("/trip/:id", async(req, res) => {
     try {
         const tripData = await Trip.findByPk(req.params.id, {
             include: [{
-                model: Trip,
+                model: User,
             }, ],
         });
         const trip = tripData.get({ plain: true });
@@ -136,7 +136,14 @@ router.get('/searchpage', async (req, res) => {
 //route for the the public profile page
 router.get('/profile', async (req, res) => {
   try {
+    const profileData = await User.findByPk(req.session.user_id, {
+      include: [{
+          model: Trip,
+      }, ],
+  });
+  const profile = profileData.get({ plain: true });
     res.render("profile", {
+      ...profile,
       logged_in: req.session.logged_in,
     });
     } catch (err) {

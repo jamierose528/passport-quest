@@ -2,7 +2,7 @@
             <section class="card" style="width: 600px; height: auto;">
 
                 <h3 id="title-">Sign Up</h3>
-                <form>
+                <form class= "signup-form">
                     <div class="form-group">
                         <p>
                             <label for="username"> UserName:*</label><input type="text" id="userName" name="userName" style="color: #000000 !important"></input>
@@ -31,14 +31,13 @@
                             <label for="homeCountry"> Home Country: </label><input type="text" id="homeCountry" name="homeCountry" style="color: #000000 !important"></input>
                         </p>
                         <p><label for="first"> Profite Picture:*</label></p>
-                </form>
-                <form action="/action_page.php">
+                
                     <input type="file" id="img" name="img" accept="image/*" style="float: left;">
+
+                    <ul class="actions">
+                    <input type="submit" value="submit" class="button primary">
+                </ul>
                 </form>
                 </div>
-                <ul class="actions">
-                    <input href="#profile-page" type="submit" value="submit" class="button primary">
-                </ul>
 
-
-    <script src="./JS/JavaScript.js "></script>
+    <script src="./js/signup.js "></script>
