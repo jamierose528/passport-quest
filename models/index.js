@@ -1,28 +1,17 @@
 const Blog = require('./blog');
-const Food = require('./food');
-const Packing = require('./packing');
 const Trip = require('./trip');
 const User = require('./user');
 
 
-User.belongsToMany(Trip, {
-    // Define the third table needed to store the foreign keys
-    through: {
-        model: Trip,
-        unique: false
-    },
+User.hasMany(Trip, {
     // Define an alias for when data is retrieved
-    as: 'planned_trips'
+    foreignKey: 'user_id'
 });
 
-Trip.belongsToMany(User, {
-  // Define the third table needed to store the foreign keys
-  through: {
-      model: Trip,
-      unique: false
-  },
+Trip.belongsTo(User, {
   // Define an alias for when data is retrieved
-  as: 'users_trips'
+  foreignKey: 'user_id',
+  onDelete: "CASCADE"
 });
 
 User.hasMany(Blog,{
@@ -30,8 +19,8 @@ User.hasMany(Blog,{
 
 })
 Blog.belongsTo(User,{
-    foreignKey:"user_id",
-    onDelete: "CASCADE"
+  foreignKey:"user_id",
+  onDelete: "CASCADE"
 })
 
 User.hasMany(Trip,{
@@ -43,4 +32,4 @@ User.hasMany(Trip,{
 //     onDelete: "CASCADE"
 // })
 
-module.exports = { Blog, Food, Packing, Trip, User };
+module.exports = { Blog, Trip, User };

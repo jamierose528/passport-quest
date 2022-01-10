@@ -5,6 +5,9 @@ const { User, Trip, Blog } = require("../models");
 const userData = [
   {
     username: "trailTrek",
+    first_name: "Jenn",
+    middle_name: "S",
+    last_name: "Lee",
     email: "trailtrek@email.com",
     password: "password",
   },
