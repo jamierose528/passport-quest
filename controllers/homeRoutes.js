@@ -85,14 +85,7 @@ router.get('/viewtrip', async (req, res) => {
 //route for adding a blog page
 router.get('/addblog', async (req, res) => {
   try {
-    // const tripData = await Trip.findAll( {
-    //   include: [{ model: Trip }],
-    // });
-  
-    // const trips = tripData.map(trip => trip.get({plain: true}))
-
     res.render("addblog", {
-      blogs,
       logged_in: req.session.logged_in,
     });
     } catch (err) {
@@ -103,12 +96,6 @@ router.get('/addblog', async (req, res) => {
 //route for adding a trip page
 router.get('/addtrip', async (req, res) => {
   try {
-    // const tripData = await Trip.findAll( {
-    //   include: [{ model: Trip }],
-    // });
-  
-    // const trips = tripData.map(trip => trip.get({plain: true}))
-
     res.render("addtrip", {
       trips,
       logged_in: req.session.logged_in,
