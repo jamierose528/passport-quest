@@ -18,12 +18,20 @@
               <section id="passport-block">
                 <img id="user-profile-picture" />
                 <ul id="user-information">
-                  <li id="user-name">Name: {{first_name}}{{middle_name}}{{last_name}}</li>
-                  <li id="user-email">Email: {{email}}</li>
-                  <li id="user-username">Username: {{username}}</li>
-                  <li id="user-birthday">Birthday: {{birthday}}</li>
-                  <li id="user-nationality">Nationality: {{nationality}}</li>
-                  <li id="user-location">Currently in: {{current_location}}</li>
+                  <li class="profile-info" id="user-name">Name: {{}}</li>
+                      <li class="profile-info" id="user-email">Email: {{}}</li>
+                      <li class="profile-info" id="user-username">
+                        Username: {{}}
+                      </li>
+                      <li class="profile-info" id="user-birthday">
+                        Birthday: {{}}
+                      </li>
+                      <li class="profile-info" id="user-nationality">
+                        Nationality: {{}}
+                      </li>
+                      <li class="profile-info" id="user-location">
+                        Currently in: {{}}
+                      </li>
                 </ul>
               </section>
             </div>
