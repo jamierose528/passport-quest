@@ -13,8 +13,6 @@ Trip.init({
         autoIncrement: true,
         unique: true,
     },
-
-
     user_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -23,7 +21,6 @@ Trip.init({
       },
 
     },
-
     city: {
         type: DataTypes.STRING,
         allowNull: false,
