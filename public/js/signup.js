@@ -10,7 +10,7 @@ const signupFormHandler = async (event) => {
   const birthday = document.querySelector("#datepicker").value.trim();//datepicker??
   const home_country = document.querySelector("#home_country-signup").value.trim();
 
-  if (username && email && password && firstName && lastName && nationality && birthday && country) {
+  if (username && email && password && firstName && lastName && nationality && birthday && home_country) {
     const response = await fetch("/api/user", {
       method: "POST",
       body: JSON.stringify({
