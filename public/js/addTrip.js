@@ -29,7 +29,7 @@ const addTrip = async () => {
     emergencyContactPhone &&
     notes
   ) {
-    const response = await fetch("/api/trip/", {
+    const response = await fetch("/api/trip", {
       method: "POST",
       body: JSON.stringify({
         country,
