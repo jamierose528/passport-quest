@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Blog, Food, Packing, Trip } = require("../../models");
+const { Trip } = require("../../models");
 const withAuth = require("../../utils/auth");
 // const withAuth = require('../../utils/auth');
 
@@ -31,7 +31,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-router.post("/", withAuth, async (req, res) => {
+router.post("/", async (req, res) => {
   // try {
   const tripData = await Trip.create({
     ...req.body,

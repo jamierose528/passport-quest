@@ -80,17 +80,6 @@ router.get("/viewtrips", async (req, res) => {
   }
 });
 
-//route for adding a blog page
-router.get("/addblog", async (req, res) => {
-  try {
-    res.render("addblog", {
-      logged_in: req.session.logged_in,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
 //route for adding a trip page
 router.get("/addtrip", async (req, res) => {
   try {
