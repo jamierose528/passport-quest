@@ -19,8 +19,9 @@ h1 {
 
 h1,
 h3 {
-  font-family: "Rock Salt", cursive;
-  color: white;
+    font-family: "Rock Salt", cursive;
+    color: white;
+    float: center;
 }
 
 h4 {
