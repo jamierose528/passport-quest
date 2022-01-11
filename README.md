@@ -31,4 +31,7 @@ https://github.com/jamierose528/passport-quest
 
 ## Screenshots
 
+![homepage screenshot](/Users/jamiechu/UCLA/my-projects-ucla/passport-quest/public/images/homepage.png)
+![add a trip page screenshot](/Users/jamiechu/UCLA/my-projects-ucla/passport-quest/public/images/addtrippage.png)
+
 ## Live Site
