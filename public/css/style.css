@@ -13,6 +13,10 @@ header {
     padding-top: 15px;
 }
 
+h1 {
+    font-size: 40px;
+}
+
 h1,
 h3 {
     font-family: "Rock Salt", cursive;
@@ -57,6 +61,10 @@ label {
 #username-login,
 #password-login {
     color: black;
+    width: 500px;
+    margin: 10px;
+    border-radius: 10px;
+    border-color: #998466;
 }
 
 #search-title {
@@ -93,12 +101,10 @@ label {
     object-fit: fill;
 }
 
-
 #title-name {
-  font-size: 80px;
-  margin-top: 30px;
-  margin-bottom: 0;
-
+    font-size: 80px;
+    margin-top: 30px;
+    margin-bottom: 0;
 }
 
 .passport-name {
@@ -240,21 +246,33 @@ label {
 
 #searchbar {
     height: 30px;
-    border-radius: 17px;
+    width: 300px;
+    border-radius: 10px;
     box-shadow: 0 3px 10px rgb(41, 41, 41);
 }
 
 .card {
-    margin: 100px auto;
     width: 100%;
     max-width: 600px;
-    background-color: #a1968e;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border-radius: 17px;
-    padding-bottom: 31px;
-    box-shadow: 0 5px 10px rgb(41, 41, 41);
+    margin: 0 auto;
+    padding: auto;
+    box-shadow: 0px 0px 20px #00000010;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: auto;
+    box-shadow: 0px 0px 20px #00000010;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 input {
@@ -294,8 +312,9 @@ label:hover {
 }
 
 .form-input {
-    border-radius: 17px;
+    border-radius: 10px;
     padding: 5px;
+    border-color: #998466;
 }
 
 input::placeholder {
@@ -314,6 +333,53 @@ label {
     width: 20em;
 }
 
+.btn {
+    font-size: 10px;
+    appearance: none;
+    background-color: rgba(80, 80, 80, 0.438);
+    border-radius: 10px;
+    border: 0;
+    box-shadow: inset 0 0 0 2px rgba(144, 144, 144, 0.25);
+    color: #000000 !important;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    height: 30px;
+    letter-spacing: 1px;
+    padding: 0 50px;
+    padding-left: -30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-left: 300px;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+.login-link {
+    width: 140px;
+    font-size: 10px;
+    appearance: none;
+    background-color: rgba(80, 80, 80, 0.438);
+    border-radius: 10px;
+    border: 0;
+    box-shadow: inset 0 0 0 2px rgba(144, 144, 144, 0.25);
+    color: #000000 !important;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    height: 30px;
+    letter-spacing: 1px;
+    padding: 0 20px;
+    padding-left: -30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-left: 300px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
 input[type="submit"],
 button,
 .button {
@@ -330,13 +396,13 @@ button,
     font-weight: 600;
     height: 30px;
     letter-spacing: 1px;
-    padding: 0 50px;
+    padding: 0 20px;
     padding-left: -30px;
     text-align: center;
     text-transform: uppercase;
     white-space: nowrap;
-    margin-left: 300px;
-    margin-bottom: 20px;
+    margin-left: 250px;
+    margin-bottom: 10px;
     margin-top: 20px;
 }
 
@@ -377,18 +443,6 @@ select:focus {
 input.placeholder {
     font-family: Fuzzy Bubbles, cursive;
     font-size: 10px;
-}
-
-.container {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: auto;
-    box-shadow: 0px 0px 20px #00000010;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .form-group {
