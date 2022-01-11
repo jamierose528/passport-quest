@@ -334,7 +334,8 @@ button,
     text-transform: uppercase;
     white-space: nowrap;
     margin-left: 300px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 input[type="submit"].primary {
@@ -363,12 +364,11 @@ textarea {
     display: block;
     outline: 0;
     text-decoration: none;
-    width: 80%;
+    width: 100%;
 }
 
 input[type="text"]:focus,
-select:focus,
-textarea:focus {
+select:focus {
     border-color: hsl(152, 7%, 59%);
 }
 
@@ -381,7 +381,7 @@ input.placeholder {
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
-    padding: 20px;
+    padding: auto;
     box-shadow: 0px 0px 20px #00000010;
     border-radius: 8px;
     margin-bottom: 20px;
@@ -394,4 +394,11 @@ input.placeholder {
     margin-top: 20px;
     font-size: 15px;
     text-align: left;
+}
+
+textarea {
+    width: 410px;
+    margin-left: 20px;
+    border-radius: 10px;
+    border-color: hsl(152, 7%, 59%);
 }
