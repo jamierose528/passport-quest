@@ -1,37 +1,96 @@
-<div class="container" style="font-family: Fuzzy Bubbles, cursive; color: Black">
-    <section class="card" style="width: 600px; height: auto;">
-        <h3 id="title-">Add Trip</h3>
-        <form>
-            <p class="form-group">
-            <p><label for="country">Country:</label><input type="text" id="country" name="country" style="color: #000000 !important"></input>
-                </p>
-            <p><label for="city"> City:* </label><input type="text" id="city" name="city" style="color: #000000 !important"></input>
-                </p>
-            <p><label for="StartDate"> Start Date:* </label><input type="text" class="datepicker" id="start_date" style="color: #000000 !important"></p>
-            <p><label for="EndDate"> End Date:* </label><input type="text" class="datepicker" id="end_date" style="color: #000000 !important"></p>
-            <p><label for="lastName"> Budget: </label><input type="text" id="budget" name="budget" style="color: #000000 !important"></input>
-                </p>
-            <p><label for="nationality"> Accomodation:* </label><input type="text" id="accomodation" name="accomodation" style="color: #000000 !important"></input>
-                </p>
-            <p><label for="currentLocation"> Transportation:* </label><input type="text" id="transportation" name="transportation" style="color: #000000 !important"></input>
-                </p>
-            <p><label for="emergencyContactName"> Emergency Contact Name:* </label><input type="text" id="emergencyName" name="emergencyName" style="color: #000000 !important"></input>
-                </p>
-            <p><label for="emergencyContactPhone"> Emergency Contact Phone:* </label><input type="text" id="emergencyContact" name="emergencyContact" style="color: #000000 !important"></input>
-                </p>
-            <p><label for="note">Note: </label><input type="text" id="note" name="note" style="color: #000000 !important"></input>
-                </p>
-            </form>
-            <ul class="actions">
-                <input href="#profile-page" type="submit" value="submit" class="button primary">
-            </ul>
-    </div>
-<script>
-	$(function() {
-			$(".datepicker").datepicker({
-					changeMonth: true,
-					changeYear: true
-			});
-});
-</script>
+<div
+  class="container"
+  style="font-family: Fuzzy Bubbles, cursive; color: Black"
+>
+  <section class="card" style="width: 600px; height: auto;">
+    <h3 id="title-">Add Trip</h3>
+    <form id="add-trip-form">
+      <p class="form-group">
+        <p><label for="country">Country:</label><input
+            type="text"
+            id="country"
+            name="country"
+            style="color: #000000 !important"
+          />
+        </p>
+        <p><label for="city"> City:* </label><input
+            type="text"
+            id="city"
+            name="city"
+            style="color: #000000 !important"
+          />
+        </p>
+        <p><label for="StartDate"> Start Date:* </label><input
+            type="text"
+            class="datepicker"
+            id="start_date"
+            style="color: #000000 !important"
+          /></p>
+        <p><label for="EndDate"> End Date:* </label><input
+            type="text"
+            class="datepicker"
+            id="end_date"
+            style="color: #000000 !important"
+          /></p>
+        <p><label for="budget"> Budget: </label><input
+            type="text"
+            id="budget"
+            name="budget"
+            style="color: #000000 !important"
+          />
+        </p>
+        <p><label for="accommodation"> Accommodation:* </label><input
+            type="text"
+            id="accommodation"
+            name="accommodation"
+            style="color: #000000 !important"
+          />
+        </p>
+        <p><label for="transportation"> Transportation:* </label><input
+            type="text"
+            id="transportation"
+            name="transportation"
+            style="color: #000000 !important"
+          />
+        </p>
+        <p><label for="emergencyContactName">
+            Emergency Contact Name:*
+          </label><input
+            type="text"
+            id="emergencyName"
+            name="emergencyName"
+            style="color: #000000 !important"
+          />
+        </p>
+        <p><label for="emergencyContactPhone">
+            Emergency Contact Phone:*
+          </label><input
+            type="text"
+            id="emergencyContact"
+            name="emergencyContact"
+            style="color: #000000 !important"
+          />
+        </p>
+        <p><label for="notes">Note: </label><input
+            type="text"
+            id="note"
+            name="note"
+            style="color: #000000 !important"
+          />
+        </p>
+        <input
+          href="#profile-page"
+          type="submit"
+          value="submit"
+          class="button primary"
+        />
+      </p>
+    </form>
 
+  </section>
+</div>
+<script>
+  $(function() { $(".datepicker").datepicker({ changeMonth: true, changeYear:
+  true }); });
+</script>
+<script src="/js/addTrip.js"></script>
