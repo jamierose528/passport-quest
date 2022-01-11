@@ -14,13 +14,16 @@
                 </p>
                 <textarea name="message" id="message" rows="10" style="margin-top: -20px;"></textarea>
                 <p><label for="first">Picture/video:*</label></p>
-        </form>
-        <form action="" method="POST" enctype="multipart/form-data">
+        {{!-- </form>
+        <form action="" method="POST" enctype="multipart/form-data"> --}}
             <input type="file" id="file" name="file" aria-labelledby="file" accept="image/video" style="float: left;">
+            <div class="actions">
+                <button id="addBlog" class="button primary">Submit</button>
+            </div>
         </form>
-            <ul class="actions">
-                <input href="#profile-page" type="submit" value="submit" class="button primary">
-        </ul>
+
     </section>
 </div>
+
+<script src="/js/addBlog.js"></script>
 

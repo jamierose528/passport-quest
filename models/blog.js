@@ -36,7 +36,7 @@ Blog.init({
     },
     photo: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
 
     },
     video: {
