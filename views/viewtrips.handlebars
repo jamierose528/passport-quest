@@ -1,13 +1,12 @@
 {{#if trips.length}}
   <div class="card">
     <h3>View Trips:</h3>
-
     {{#each trips as |trip|}}
+    
       <div class="trips-list">
-
         <h4><a href="/viewTrips/{{trip.id}}">{{trip.city}}</a></h4>
-
       </div>
+      
     {{/each}}
   </div>
 {{/if}}
