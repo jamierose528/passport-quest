@@ -21,6 +21,11 @@ Trip.init({
       },
 
     },
+    country: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        defaultValue: 1,
+    },
     city: {
         type: DataTypes.STRING,
         allowNull: false,
