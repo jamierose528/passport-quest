@@ -1,14 +1,11 @@
 {{#if blogs.length}}
-  <div class="col-md-6 project-list">
+  <div class="card">
     <h3>View Blogs:</h3>
 
     {{#each blogs as |blog|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/viewBlogs/{{blog.id}}">{{blog.title}}</a></h4>
+      <div id="blog-list">
+        <a id="view-all-blogs" href="/viewBlogs/{{blog.id}}">{{blog.title}}</a>
       </div>
-    
-    </div>
     {{/each}}
   </div>
-  {{/if}}
+{{/if}}

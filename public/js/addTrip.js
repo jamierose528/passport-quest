@@ -16,7 +16,7 @@ const addTrip = async () => {
     .value.trim();
 
   const notes = document.querySelector("#note").value.trim();
-  alert(country);
+
   if (
     country &&
     city &&

@@ -4,7 +4,7 @@
     {{#each trips as |trip|}}
     
       <div class="trips-list">
-        <h4><a href="/viewTrips/{{trip.id}}">{{trip.city}}</a></h4>
+        <a id="view-all-trips" href="/viewTrips/{{trip.id}}">{{trip.city}}</a>
       </div>
       
     {{/each}}
