@@ -1,24 +1,27 @@
 <div class="container" style="font-family: Fuzzy Bubbles, cursive; color: Black">
-            <section class="card" style="width: 600px; height: auto;">
+    <section class="card" style="width: 600px; height: auto;">
+    <h3 style="margin-top: 20px" id="title-">Add Blog</h3>
+        <form>
+            <div class="form-group">
+                <p>
+                    <label for="tripid"> Trip ID: {{tripId}}</label>
+                </p>
+                <p>
+                    <label for="title">Title:*</label><input type="text" id="title" name="title" style="color: #000000 !important"></input>
+                </p>
+                <p>
+                    <label for="title">Blog:*</label>
+                </p>
+                <textarea name="message" id="message" rows="10" style="margin-top: -20px;"></textarea>
+                <p><label for="first">Picture/video:*</label></p>
+        </form>
+        <form action="" method="POST" enctype="multipart/form-data">
+            <input type="file" id="file" name="file" aria-labelledby="file" accept="image/video" style="float: left;">
+        </form>
 
-                <h3 id="title-">Add Blog</h3>
-                <form>
-                    <div class="form-group">
-                        <p>
-                            <label for="tripid"> Trip ID: {{tripId}}</label>
-                        </p>
-                        <p>
-                            <label for="title">Title:*</label><input type="text" id="title" name="title" style="color: #000000 !important"></input>
-                        </p>
-                        <p><label row="7" for="homeCountry">Blog:* </label><input type="text" id="note" name="note" style="color: #000000 !important"></input>
-                        </p>
-                        <p><label for="first">Picture/video:*</label></p>
-                </form>
-                <form action="" method="POST" enctype="multipart/form-data">
-                    <input type="file" id="file" name="file" aria-labelledby="file" accept="image/video" style="float: left;">
-                </form>
-
-                <ul class="actions">
-                    <input href="#profile-page" type="submit" value="submit" class="button primary">
-                </ul>
+            <ul class="actions">
+                <input href="#profile-page" type="submit" value="submit" class="button primary">
+        </ul>
+    </section>
+</div>
 
