@@ -3,38 +3,44 @@ const addTrip = async () => {
 
   const country = document.querySelector("#country").value.trim();
   const city = document.querySelector("#city").value.trim();
-  const startDate = document.querySelector("#start_date").value.trim();
-  const endDate = document.querySelector("#end_date").value.trim();
-  const accomodation = document.querySelector("#accomodation").value.trim();
+  const startDay = document.querySelector("#start_date").value.trim();
+  const endDay = document.querySelector("#end_date").value.trim();
+  const budget = document.querySelector("#budget").value.trim();
+  const accommodation = document.querySelector("#accommodation").value.trim();
   const transportation = document.querySelector("#transportation").value.trim();
-  const emergencyName = document.querySelector("#emergencyName").value.trim();
-  const emergencyContact = document
+  const emergencyContactName = document
+    .querySelector("#emergencyName")
+    .value.trim();
+  const emergencyContactPhone = document
     .querySelector("#emergencyContact")
     .value.trim();
-  const notes = document.querySelector("#note").value.trim();
 
+  const notes = document.querySelector("#note").value.trim();
+  alert(country);
   if (
     country &&
     city &&
-    startDate &&
-    endDate &&
-    accomodation &&
+    startDay &&
+    endDay &&
+    budget &&
+    accommodation &&
     transportation &&
-    emergencyName &&
-    emergencyContact &&
+    emergencyContactName &&
+    emergencyContactPhone &&
     notes
   ) {
-    const response = await fetch("/api/users/addTrip", {
+    const response = await fetch("/api/trip/", {
       method: "POST",
       body: JSON.stringify({
         country,
         city,
-        startDate,
-        endDate,
-        accomodation,
+        startDay,
+        endDay,
+        budget,
+        accommodation,
         transportation,
-        emergencyName,
-        emergencyContact,
+        emergencyContactName,
+        emergencyContactPhone,
         notes,
       }),
       headers: { "Content-Type": "application/json" },
@@ -48,7 +54,7 @@ const addTrip = async () => {
   }
 };
 
-document.querySelector("#addTrip").addEventListener("click", addTrip);
+document.querySelector("#add-trip-form").addEventListener("submit", addTrip);
 
 // Datepicker
 $(function () {
