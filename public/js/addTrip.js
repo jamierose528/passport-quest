@@ -41,7 +41,7 @@ const addTrip = async () => {
     });
 
     if (response.ok) {
-      document.location.replace("/");
+      document.location.replace("/viewtrips");
     } else {
       alert(response.statusText);
     }
