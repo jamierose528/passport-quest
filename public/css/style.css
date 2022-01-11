@@ -85,6 +85,12 @@ label {
   object-fit: fill;
 }
 
+.title-name {
+    font-size: 80px;
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+
 .passport-name {
   font-family: "Times New Roman", Times, serif !important;
 }
