@@ -1,6 +1,3 @@
-* {
-  color: white;
-}
 body {
   background-color: rgb(247, 235, 235);
   background-image: url(../images/b-w_stamps.png);
@@ -16,7 +13,6 @@ header {
 }
 
 h1,
-h2,
 h3 {
   font-family: "Rock Salt", cursive;
 }
@@ -25,7 +21,7 @@ h4 {
   font-family: "Fuzzy Bubbles", cursive;
 }
 
-nav {
+.navbar {
   justify-content: flex-end;
   align-items: flex-end;
   padding: 32px;
@@ -84,6 +80,10 @@ label {
 #passport-picture {
   width: 100%;
   object-fit: fill;
+}
+
+.passport-name {
+  font-family: "Times New Roman", Times, serif !important;
 }
 
 .passport-city-country {
