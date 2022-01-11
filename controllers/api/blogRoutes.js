@@ -2,6 +2,21 @@ const router = require('express').Router();
 const { Blog, Trip} = require('../../models');
 // const withAuth = require('../../utils/auth');
 
+//Create a blog post
+router.post('/addblog', async (req, res) => {
+  console.log(req.body)
+    try {
+      const blogData = await Blog.create({
+      ...req.body,
+      user_id: req.session.user_id
+      });
+      console.log(blogData)
+      res.status(200).json(blogData);
+    } catch (err) {
+      res.status(400).json(err);
+    }
+});
+
 //Get all bloggers/users
 router.get('/', async (req, res) => {
     try {
@@ -32,16 +47,5 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-//Create a blog post
-router.post('/', async (req, res) => {
-    try {
-      const blogData = await Blog.create({
-        blog_id: req.body.blog_id,
-      });
-      res.status(200).json(blogData);
-    } catch (err) {
-      res.status(400).json(err);
-    }
-});
 
 module.exports = router;
