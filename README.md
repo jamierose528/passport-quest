@@ -35,3 +35,4 @@ https://github.com/jamierose528/passport-quest
 ![add a trip page screenshot](/Users/jamiechu/UCLA/my-projects-ucla/passport-quest/public/images/addtrippage.png)
 
 ## Live Site
+https://obscure-springs-82894.herokuapp.com/
