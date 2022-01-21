@@ -5,7 +5,7 @@ const addBlog = async () => {
   });
 
   if (response.ok) {
-    document.location.replace("/");
+    document.location.replace("/viewBlog");
   } else {
     alert(response.statusText);
   }
