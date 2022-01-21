@@ -1,3 +1,7 @@
+* {
+    align-items: center;
+}
+
 body {
   background-color: rgb(247, 235, 235);
   background-image: url(../images/b-w_stamps.png);
@@ -21,7 +25,7 @@ h1,
 h3 {
     font-family: "Rock Salt", cursive;
     color: white;
-    float: center;
+    text-align: center;
 }
 
 h4 {
@@ -49,14 +53,15 @@ p {
 }
 
 label {
-  display: block;
-  text-align: left;
-  margin: 6 auto;
-  width: 100px;
-  font-family: "Comic Neue", cursive;
-  text-shadow: 1px 1px 5px rgb(51, 51, 51);
-  font-size: 15px;
-  color: white;
+    display: block;
+    text-align: left;
+    margin: 6 auto;
+    width: 100px;
+    font-family: "Comic Neue", cursive;
+    text-shadow: 1px 1px 5px rgb(51, 51, 51);
+    font-size: 15px;
+    color: white;
+    margin-left: 20px
 }
 
 #username-login,
@@ -237,14 +242,16 @@ label {
 }
 
 #search-title {
-  text-shadow: 3px 3px 5px rgb(24, 24, 24);
-  font-size: 25px;
+    text-shadow: 3px 3px 5px rgb(24, 24, 24);
+    font-size: 25px;
+    text-align: center;
 }
 
 #search-parameter {
-  margin-bottom: 15px;
-  text-shadow: 3px 3px 5px rgb(24, 24, 24);
-  font-size: 25px;
+    margin-bottom: 15px;
+    text-shadow: 3px 3px 5px rgb(24, 24, 24);
+    font-size: 25px;
+    text-align: center;
 }
 
 #searchbar {
@@ -252,6 +259,7 @@ label {
     width: 300px;
     border-radius: 10px;
     box-shadow: 0 3px 10px rgb(41, 41, 41);
+    align-items: center;
 }
 
 .card {
@@ -272,7 +280,7 @@ label {
     max-width: 600px;
     margin: 0 auto;
     padding: auto;
-    background-color: #a1968e;
+    background-color: transparent;
     box-shadow: 0px 0px 20px #00000010;
     border-radius: 8px;
     margin-bottom: 20px;
@@ -339,6 +347,7 @@ label {
 }
 
 .btn {
+    width: 140px;
     font-size: 10px;
     appearance: none;
     background-color: rgba(80, 80, 80, 0.438);
@@ -388,7 +397,7 @@ label {
 input[type="submit"],
 button,
 .button {
-    font-size: 10px;
+    width: 190px;
     appearance: none;
     background-color: transparent;
     border-radius: 10px;
@@ -458,8 +467,8 @@ input.placeholder {
 }
 
 textarea {
-  width: 410px;
-  margin-left: 20px;
-  border-radius: 10px;
-  border-color: hsl(152, 7%, 59%);
+    width: 400px;
+    margin-left: 20px;
+    border-radius: 10px;
+    border-color: hsl(152, 7%, 59%);
 }
