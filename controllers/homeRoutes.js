@@ -24,24 +24,24 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/viewTrips/:id", async (req, res) => {
+  try {
+    const tripData = await Trip.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+        },
+      ],
+    });
+    const trip = tripData.get({ plain: true });
 
-router.get("/trip/:id", async(req, res) => {
-    try {
-        const tripData = await Trip.findByPk(req.params.id, {
-            include: [{
-                model: User,
-            }, ],
-        });
-        const trip = tripData.get({ plain: true });
-
-        res.render("trip", {
-            ...trip,
-            logged_in: req.session.logged_in,
-        });
-    } catch (err) {
-        res.status(500).json(err);
-    }
-
+    res.render("viewtrips", {
+      ...trip,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 //Viewing all blogs
@@ -139,12 +139,14 @@ router.get("/searchpage", async (req, res) => {
 router.get("/profile", async (req, res) => {
   try {
     const profileData = await User.findByPk(req.session.user_id, {
-      include: [{
+      include: [
+        {
           model: Trip,
-      }, ],
-  });
-  const profile = profileData.get({ plain: true });
-  // res.json(profile);
+        },
+      ],
+    });
+    const profile = profileData.get({ plain: true });
+    // res.json(profile);
     res.render("profile", {
       ...profile,
       logged_in: req.session.logged_in,
